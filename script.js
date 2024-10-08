@@ -34,14 +34,15 @@ function displayProjects(records) {
     records.forEach(record => {
         const projectName = record.fields['Project Name'];
         const imageUrl = record.fields['Image URL'];
+        const projectID = record.id;  // Retrieve the unique project ID from Airtable
 
         const item = document.createElement('div');
         item.classList.add('portfolio-item');
         item.innerHTML = `
-            <a href="#">
+            <a href="project-detail.html?id=${projectID}">
                 <img src="${imageUrl}" alt="${projectName}">
                 <h3>${projectName}</h3>
-                <p>Description for ${projectName}</p> <!-- You can modify this if you have a description column -->
+                <p>Description for ${projectName}</p>
             </a>
         `;
         portfolioItemsContainer.appendChild(item);
@@ -75,4 +76,3 @@ function stickyNavbar() {
         navbar.classList.remove("sticky");
     }
 }
-
