@@ -82,7 +82,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 10px 40px;
-    background-color: #0d0f15;
+    background-color: #333333; /* Ubah warna capsule menjadi dark grey */
     position: fixed;
     width: fit-content;
     top: 20px;
@@ -94,9 +94,10 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.logo {
-    font-size: 1.2rem;
+.logo a {
     color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
     margin-right: 30px;
 }
 
@@ -132,12 +133,12 @@ body {
 
 /* Sticky Navbar */
 .sticky {
-    background-color: #000000;
+    background-color: #444444; /* Ubah warna capsule saat sticky */
     padding: 10px 60px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Adjust spacing for sections */
+/* Section spacing */
 section {
     padding-top: 100px;
 }
