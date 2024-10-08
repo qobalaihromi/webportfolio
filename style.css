@@ -14,73 +14,58 @@ body {
 /* Hero Section */
 .hero {
     height: 100vh;
-    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    overflow: hidden;
-    background: black;
+    text-align: left;
     padding: 0 100px;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, #ff005e, #9f00ff, #009fff, #00ff95);
-    filter: blur(150px);
-    animation: moveGradient 20s infinite alternate;
-    opacity: 0.6;
-    z-index: 0;
+    background-color: #0d0f15; /* Background warna solid */
+    position: relative;
+    overflow: hidden; /* Pastikan tidak ada overflow yang tidak perlu */
 }
 
 .hero-content {
-    position: relative;
-    z-index: 1;
-    text-align: left;
     max-width: 1200px;
-    margin: 0 auto;
+    z-index: 1;
 }
 
 .hero-content h1 {
-    font-size: 2rem;
+    font-size: 2rem; /* Ukuran teks yang lebih kecil */
+    color: #9fa1a7;  /* Warna abu-abu terang untuk teks "Hello! I’m Ivan." */
     font-weight: 400;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .hero-content h2 {
-    font-size: 3.5rem;
+    font-size: 4.5rem; /* Ukuran besar untuk judul utama */
     font-weight: 700;
-    margin: 0;
+    margin-bottom: 1.5rem;
     line-height: 1.2;
+    color: #ffffff; /* Warna putih untuk judul utama */
 }
 
 .hero-content h2 span {
-    color: #8b8e96;
+    color: #51555d; /* Warna abu-abu gelap untuk bagian "visual design" */
 }
 
 .hero-content p {
     font-size: 1.2rem;
-    margin-top: 1.5rem;
-    color: #8b8e96;
+    color: #9fa1a7; /* Warna abu-abu terang untuk deskripsi */
+    margin-bottom: 2rem;
     max-width: 500px;
 }
 
 .hero-content .btn {
-    display: inline-block;
-    margin-top: 2rem;
-    padding: 0.8rem 2rem;
+    padding: 10px 20px;
     background-color: #fff;
     color: #000;
     border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
     font-size: 1rem;
     font-weight: 500;
     text-decoration: none;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .hero-content .btn:hover {
@@ -89,6 +74,25 @@ body {
 
 .hero-content .btn span {
     margin-left: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        padding: 0 20px;
+    }
+
+    .hero-content h2 {
+        font-size: 3rem; /* Ukuran lebih kecil di layar mobile */
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
 }
 
 /* Work Experience */
@@ -118,56 +122,65 @@ body {
 /* Portfolio Section */
 .portfolio {
     padding: 50px 100px;
+    background-color: #0e0e10;
 }
 
 .portfolio h2 {
     font-size: 2rem;
     margin-bottom: 30px;
+    color: #fff;
+}
+
+.portfolio-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+    margin-top: 20px;
 }
 
 .portfolio-item {
-    margin-bottom: 30px;
+    background-color: #1a1a1d;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    transition: transform 0.3s ease;
 }
 
 .portfolio-item img {
     max-width: 100%;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .portfolio-item h3 {
     font-size: 1.5rem;
-    margin-top: 10px;
+    color: #fff;
+    margin-bottom: 10px;
 }
 
 .portfolio-item p {
     color: #8b8e96;
-    margin-top: 5px;
+    margin-bottom: 20px;
 }
 
-/* Keyframes untuk motion blur gradient */
-@keyframes moveGradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+.portfolio-item .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
-/* Update durasi animasi menjadi lebih cepat */
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, #ff005e, #9f00ff, #009fff, #00ff95);
-    filter: blur(150px);
-    animation: moveGradient 10s infinite alternate; /* Perubahan durasi dari 20s menjadi 10s */
-    opacity: 0.6;
-    z-index: 0;
+.portfolio-item .btn:hover {
+    background-color: #e6e6e6;
+}
+
+/* Hover Effect */
+.portfolio-item:hover {
+    transform: scale(1.05);
 }
