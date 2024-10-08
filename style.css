@@ -23,6 +23,11 @@ body {
     background-color: #0e0e10;
 }
 
+.hero-content {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
 .hero-content h1 {
     font-size: 1.5rem;
     font-weight: normal;
@@ -39,7 +44,7 @@ body {
 }
 
 .hero-content h2 span {
-    color: #8b8e96; /* Menggunakan warna abu-abu untuk teks “visual design” */
+    color: #8b8e96;
 }
 
 .hero-content p {
