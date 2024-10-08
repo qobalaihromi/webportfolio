@@ -4,31 +4,72 @@
     box-sizing: border-box;
 }
 
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #0e0e10;
+    color: #fff;
 }
 
+/* Hero Section */
 .hero {
-    background: url('hero-bg.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #000000;
-    text-align: center;
+    text-align: left;
+    padding: 0 2rem;
+    background-color: #0e0e10;
 }
 
 .hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.hero-content h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.hero-content h2 span {
+    color: #8b8e96; /* Menggunakan warna abu-abu untuk teks “visual design” */
 }
 
 .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    color: #8b8e96;
+    max-width: 400px;
 }
+
+.hero-content .btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    background-color: #fff;
+    color: #000;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.hero-content .btn:hover {
+    background-color: #e6e6e6;
+}
+
+.hero-content .btn span {
+    margin-left: 0.5rem;
+}
+
 
 .btn {
     background-color: #ff6f61;
@@ -98,7 +139,6 @@ body {
 .portfolio-item p {
     color: #666;
 }
-
 /* Project Detail */
 .project-detail {
     padding: 50px;
