@@ -50,3 +50,40 @@ function displayProjects(records) {
 
 // Call fetchProjects on page load
 document.addEventListener('DOMContentLoaded', fetchProjects);
+
+// Smooth scrolling behavior for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Sticky navbar
+window.onscroll = function() {stickyNavbar()};
+
+var navbar = document.querySelector('.navbar');
+var sticky = navbar.offsetTop;
+
+function stickyNavbar() {
+    if (window.pageYOffset > sticky) {
+        navbar.classList.add("sticky");
+    } else {
+        navbar.classList.remove("sticky");
+    }
+}
+
+// Active link change on click
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', function() {
+        // Remove active class from all links
+        document.querySelectorAll('.nav-links a').forEach(link => link.classList.remove('active'));
+
+        // Add active class to clicked link
+        this.classList.add('active');
+    });
+});
