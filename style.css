@@ -1,3 +1,14 @@
+:root {
+    --primary-color: #0e0e10;
+    --secondary-color: #1a1a1d;
+    --text-color: #fff;
+    --accent-color: #9fa1a7;
+    --muted-text-color: #8b8e96;
+    --highlight-color: #51555d;
+    --box-shadow: rgba(0, 0, 0, 0.2);
+}
+
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,8 +17,8 @@
 
 body {
     font-family: 'IBM Plex Sans', sans-serif;
-    background-color: #0e0e10;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     overflow-x: hidden;
 }
 
@@ -17,11 +28,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: left;
     padding: 0 100px;
     background-color: #0d0f15;
     position: relative;
-    overflow: hidden;
 }
 
 .hero-content {
@@ -31,7 +40,7 @@ body {
 
 .hero-content h1 {
     font-size: 2rem;
-    color: #9fa1a7;
+    color: var(--accent-color);
     font-weight: 400;
     margin-bottom: 1rem;
 }
@@ -41,16 +50,16 @@ body {
     font-weight: 700;
     margin-bottom: 1.5rem;
     line-height: 1.2;
-    color: #ffffff;
+    color: var(--text-color);
 }
 
 .hero-content h2 span {
-    color: #51555d;
+    color: var(--highlight-color);
 }
 
 .hero-content p {
     font-size: 1.2rem;
-    color: #9fa1a7;
+    color: var(--accent-color);
     margin-bottom: 2rem;
     max-width: 500px;
 }
@@ -73,7 +82,7 @@ body {
     margin-left: 0.5rem;
 }
 
-/* Navbar */
+/* Navbar Styles */
 .navbar {
     display: flex;
     justify-content: center;
@@ -88,11 +97,11 @@ body {
     border-radius: 50px;
     z-index: 100;
     transition: all 0.3s ease;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 10px var(--box-shadow);
 }
 
 .logo a {
-    color: #ffffff;
+    color: var(--text-color);
     text-decoration: none;
     font-size: 1.2rem;
     margin-right: 30px;
@@ -105,7 +114,7 @@ body {
 }
 
 .nav-links a {
-    color: #ffffff;
+    color: var(--text-color);
     text-decoration: none;
     font-size: 1rem;
     padding: 10px 20px;
@@ -117,52 +126,143 @@ body {
     color: #000000;
 }
 
+/* Work Experience Section */
+.work-experience {
+    padding: 50px 100px;
+    background-color: var(--primary-color);
+    margin: 100px 0;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.work-experience h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+.experience {
+    background-color: var(--secondary-color);
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--box-shadow);
+    position: relative;
+    margin-bottom: 50px;
+    display: block;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.experience h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.experience p {
+    color: var(--muted-text-color);
+    margin-bottom: 10px;
+}
+
+/* Timeline Styling */
+.experience::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    position: absolute;
+    left: -25px;
+    top: 20px;
+}
+
+.experience::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: calc(100% + 30px);
+    background-color: var(--text-color);
+    left: -19px;
+    top: 40px;
+}
+
+.experience:last-child::after {
+    display: none;
+}
+
+/* Card and Portfolio Item Styles */
+.card, .portfolio-item {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover, .portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px var(--box-shadow);
+}
+
+.card h3, .portfolio-item h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.card p, .portfolio-item p {
+    color: var(--muted-text-color);
+    line-height: 1.6;
+}
+
+/* Experience Cards and Portfolio Grid */
+.experience-cards, .portfolio-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 50px 100px;
+}
+
+.card, .portfolio-item {
+    flex: 1 1 calc(33.333% - 40px);
+    max-width: 300px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .card, .portfolio-item {
+        flex: 1 1 calc(50% - 40px); /* 2 kolom di layar menengah */
+    }
+}
+
+@media (max-width: 768px) {
+    .card, .portfolio-item {
+        flex: 1 1 100%; /* 1 kolom di layar kecil */
+    }
+    .experience-cards, .portfolio-items {
+        padding: 20px;
+    }
+}
+
 /* Portfolio Section */
 .portfolio {
     padding: 50px 100px;
-    background-color: #0e0e10;
+    background-color: var(--primary-color);
 }
 
 .portfolio h2 {
     font-size: 2rem;
     margin-bottom: 30px;
-    color: #fff;
-}
-
-.portfolio-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 30px;
-    margin-top: 20px;
-}
-
-.portfolio-item {
-    background-color: #1a1a1d;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: left;
-    transition: transform 0.3s ease;
-}
-
-.portfolio-item:hover {
-    transform: scale(1.05);
+    color: var(--text-color);
 }
 
 .portfolio-item img {
     max-width: 100%;
     border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.portfolio-item h3 {
-    font-size: 1.5rem;
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-.portfolio-item p {
-    color: #8b8e96;
     margin-bottom: 20px;
 }
 
@@ -174,11 +274,11 @@ body {
     font-size: 1rem;
 }
 
-/* Project Detail Section (Tambahan) */
+/* Project Detail Section */
 .project-detail {
     padding: 50px 100px;
-    background-color: #0e0e10;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--text-color);
 }
 
 .project-header img {
@@ -193,7 +293,7 @@ body {
 }
 
 .project-header p {
-    color: #8b8e96;
+    color: var(--muted-text-color);
     font-size: 1.2rem;
 }
 
