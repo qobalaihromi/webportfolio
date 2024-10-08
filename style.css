@@ -181,18 +181,33 @@ body {
     color: #fff;
 }
 
-.project-detail h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.project-detail img {
+.project-header img {
     max-width: 100%;
     border-radius: 10px;
     margin-bottom: 20px;
 }
 
-.project-detail p {
+.project-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.project-header p {
     color: #8b8e96;
     font-size: 1.2rem;
+}
+
+.project-body {
+    margin-top: 30px;
+}
+
+.project-body h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.project-body p {
+    color: #d3d3d3;
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
