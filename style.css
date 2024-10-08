@@ -4,43 +4,59 @@
     box-sizing: border-box;
 }
 
-/* Global Styles */
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     background-color: #0e0e10;
     color: #fff;
+    overflow-x: hidden;
 }
 
 /* Hero Section */
 .hero {
     height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: left;
-    padding: 0 2rem;
-    background-color: #0e0e10;
+    position: relative;
+    overflow: hidden;
+    background: black;
+    padding: 0 100px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #ff005e, #9f00ff, #009fff, #00ff95);
+    filter: blur(150px);
+    animation: moveGradient 20s infinite alternate;
+    opacity: 0.6;
+    z-index: 0;
 }
 
 .hero-content {
-    margin-left: 100px;
-    margin-right: 100px;
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .hero-content h1 {
-    font-size: 1.5rem;
-    font-weight: normal;
+    font-size: 2rem;
+    font-weight: 400;
     margin-bottom: 0.5rem;
-    color: #ffffff;
 }
 
 .hero-content h2 {
-    font-size: 4rem;
-    font-weight: bold;
+    font-size: 3.5rem;
+    font-weight: 700;
     margin: 0;
     line-height: 1.2;
-    color: #ffffff;
 }
 
 .hero-content h2 span {
@@ -48,10 +64,10 @@ body {
 }
 
 .hero-content p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-top: 1.5rem;
     color: #8b8e96;
-    max-width: 400px;
+    max-width: 500px;
 }
 
 .hero-content .btn {
@@ -62,7 +78,7 @@ body {
     color: #000;
     border-radius: 50px;
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: 500;
     text-decoration: none;
     transition: background-color 0.3s;
 }
@@ -75,107 +91,83 @@ body {
     margin-left: 0.5rem;
 }
 
-
-.btn {
-    background-color: #ff6f61;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.btn:hover {
-    background-color: #ff856e;
-}
-
+/* Work Experience */
 .work-experience {
-    background-color: #fff;
-    padding: 50px 20px;
-    text-align: center;
+    padding: 50px 100px;
+    background-color: #121212;
 }
 
 .work-experience h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-}
-
-.experience {
+    font-size: 2rem;
     margin-bottom: 20px;
 }
 
+.experience {
+    margin-bottom: 30px;
+}
+
 .experience h3 {
-    font-size: 1.8rem;
-    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
 }
 
 .experience p {
-    font-size: 1.1rem;
-    color: #666;
+    color: #8b8e96;
 }
 
+/* Portfolio Section */
 .portfolio {
-    padding: 50px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
+    padding: 50px 100px;
 }
 
 .portfolio h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 30px;
 }
 
 .portfolio-item {
-    display: inline-block;
-    width: 300px;
-    margin: 20px;
+    margin-bottom: 30px;
 }
 
 .portfolio-item img {
-    width: 100%;
+    max-width: 100%;
     border-radius: 10px;
-    margin-bottom: 10px;
 }
 
 .portfolio-item h3 {
     font-size: 1.5rem;
-    color: #333;
+    margin-top: 10px;
 }
 
 .portfolio-item p {
-    color: #666;
-}
-/* Project Detail */
-.project-detail {
-    padding: 50px;
-    text-align: center;
+    color: #8b8e96;
+    margin-top: 5px;
 }
 
-.project-detail h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+/* Keyframes untuk motion blur gradient */
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-.project-image {
-    max-width: 600px;
-    width: 100%;
-    margin-bottom: 20px;
-    border-radius: 10px;
-}
-
-.project-description {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 30px;
-}
-
-.project-detail .btn {
-    background-color: #ff6f61;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.project-detail .btn:hover {
-    background-color: #ff856e;
+/* Update durasi animasi menjadi lebih cepat */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #ff005e, #9f00ff, #009fff, #00ff95);
+    filter: blur(150px);
+    animation: moveGradient 10s infinite alternate; /* Perubahan durasi dari 20s menjadi 10s */
+    opacity: 0.6;
+    z-index: 0;
 }
