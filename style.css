@@ -98,3 +98,39 @@ body {
 .portfolio-item p {
     color: #666;
 }
+
+/* Project Detail */
+.project-detail {
+    padding: 50px;
+    text-align: center;
+}
+
+.project-detail h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.project-image {
+    max-width: 600px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.project-description {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.project-detail .btn {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.project-detail .btn:hover {
+    background-color: #ff856e;
+}
