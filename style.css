@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #0e0e10;
+    --primary-color: #020214; /* Ubah main color atau background utama menjadi #020214 */
     --secondary-color: #1a1a1d;
     --text-color: #fff;
     --accent-color: #9fa1a7;
@@ -17,38 +17,99 @@
 
 body {
     font-family: 'IBM Plex Sans', sans-serif;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); /* Background utama berubah menjadi #020214 */
     color: var(--text-color);
     overflow-x: hidden;
+}
+
+/* Tambahan untuk membatasi lebar maksimal */
+.container {
+    max-width: 1200px; /* Batasi lebar maksimal */
+    margin: 0 auto; /* Pusatkan konten */
+    padding: 0 20px; /* Tambahkan sedikit padding di kiri dan kanan */
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #29293C;
+    position: fixed;
+    width: 561px;
+    height: 64px;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50px;
+    z-index: 100;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    padding: 0 12px;
+    background-color: #29293C; /* Ubah warna dalam nav-links juga agar konsisten */
+    border-radius: 50px;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 12px;
+    border-radius: 50px;
+    background-color: transparent;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: var(--highlight-color);
+    color: #ffffff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.home-link {
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.home-link:hover {
+    background-color: #f0f0f0;
 }
 
 /* Hero Section */
 .hero {
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 0 100px;
-    background-color: #0d0f15;
+    padding: 0 120px;
+    background-color: var(--primary-color); /* Background hero section berubah menjadi #020214 */
     position: relative;
 }
 
 .hero-content {
-    max-width: 1200px;
+    max-width: 50%;
     z-index: 1;
+    text-align: left;
 }
 
 .hero-content h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     color: var(--accent-color);
     font-weight: 400;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .hero-content h2 {
     font-size: 4.5rem;
     font-weight: 700;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     line-height: 1.2;
     color: var(--text-color);
 }
@@ -58,20 +119,21 @@ body {
 }
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: var(--accent-color);
-    margin-bottom: 2rem;
-    max-width: 500px;
+    margin-bottom: 2.5rem;
+    max-width: 550px;
 }
 
 .hero-content .btn {
-    padding: 10px 20px;
+    padding: 12px 25px;
     background-color: #fff;
     color: #000;
     border-radius: 50px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 500;
     text-decoration: none;
+    display: inline-block;
 }
 
 .hero-content .btn:hover {
@@ -82,56 +144,34 @@ body {
     margin-left: 0.5rem;
 }
 
-/* Navbar Styles */
-.navbar {
+.hero-cv {
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 10px 40px;
-    background-color: #333333;
-    position: fixed;
-    width: fit-content;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 50px;
-    z-index: 100;
-    transition: all 0.3s ease;
-    box-shadow: 0px 4px 10px var(--box-shadow);
+    justify-content: center;
 }
 
-.logo a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-size: 1.2rem;
-    margin-right: 30px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 10px 20px;
-    border-radius: 50px;
-}
-
-.nav-links a:hover {
+.download-cv-btn {
+    padding: 12px 25px;
     background-color: #ffffff;
     color: #000000;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.download-cv-btn:hover {
+    background-color: #e6e6e6;
 }
 
 /* Work Experience Section */
 .work-experience {
-    padding: 50px 100px;
-    background-color: var(--primary-color);
-    margin: 100px 0;
-    max-width: 1000px;
+    padding: 0px 0px;
+    background-color: var(--primary-color); /* Background work experience berubah menjadi #020214 */
+    margin: 24px 0;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -195,7 +235,7 @@ body {
 
 /* Card and Portfolio Item Styles */
 .card, .portfolio-item {
-    background-color: var(--secondary-color);
+    background-color: #040420; /* Ubah background color menjadi #040420 */
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 8px var(--box-shadow);
@@ -251,33 +291,68 @@ body {
 /* Portfolio Section */
 .portfolio {
     padding: 50px 100px;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); /* Background portfolio berubah menjadi #020214 */
 }
 
 .portfolio h2 {
     font-size: 2rem;
     margin-bottom: 30px;
     color: var(--text-color);
+    text-align: center;
 }
 
-.portfolio-item img {
-    max-width: 100%;
+/* Portfolio Items Flexbox */
+.portfolio-items {
+    display: flex;
+    flex-wrap: wrap; /* Agar item berbaris ke bawah jika tidak cukup ruang */
+    justify-content: space-between; /* Memberikan jarak antara item */
+    gap: 16px; /* Jarak antar item card */
+    padding: 50px 0;
+}
+
+/* Set flex basis and max width for portfolio-item */
+.portfolio-item {
+    flex: 1 1 calc(33.333% - 16px); /* Mengatur ukuran card menjadi 1/3 dari container, kurangi jarak antar card */
+    max-width: calc(33.333% - 16px); /* Menghindari card melebihi lebar maksimal */
+    background-color: var(--secondary-color);
+    padding: 20px;
     border-radius: 10px;
-    margin-bottom: 20px;
+    box-shadow: 0 4px 8px var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.portfolio-item .btn {
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #000;
-    border-radius: 50px;
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px var(--box-shadow);
+}
+
+/* Gambar thumbnail */
+.portfolio-item img {
+    width: 100%;
+    height: 200px; /* Membuat tinggi tetap untuk gambar */
+    object-fit: cover; /* Memastikan gambar tetap proporsional */
+    margin-bottom: 16px; /* Jarak antara gambar dan konten di bawahnya */
+    border-radius: 10px;
+}
+
+/* Title */
+.portfolio-item h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+/* Deskripsi */
+.portfolio-item p {
+    color: var(--muted-text-color);
     font-size: 1rem;
+    line-height: 1.6;
 }
 
 /* Project Detail Section */
 .project-detail {
     padding: 50px 100px;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); /* Background project detail berubah menjadi #020214 */
     color: var(--text-color);
 }
 
