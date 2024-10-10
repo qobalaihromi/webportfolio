@@ -1,6 +1,6 @@
-// Airtable API configuration
-const baseURL = 'https://api.airtable.com/v0/appCGbK0Tltcfhjqx/tblqf6a4mfSlccRzB';
-const token = 'Bearer patz7CHPSxFhadt6e.d9302892a574d6bb607cd555672a434b1eb1a05b2a0d3b43bd39029660004648';
+// Airtable API configuration for Project Details
+const baseURL = 'https://api.airtable.com/v0/appCGbK0Tltcfhjqx/tblqf6a4mfSlccRzB'; // Ganti sesuai Table ID untuk Portfolio
+const token = 'Bearer patz7CHPSxFhadt6e'; // Token API yang telah diberikan
 
 // Function to fetch project details based on project ID
 async function fetchProjectDetail(projectID) {
