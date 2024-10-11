@@ -1,80 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ihromi Design Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Romi Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="#hero" class="home-link">Home</a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#work-experience">Work Experience</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Hello! I’m Fufufafa Putra Mulyono.</h1>
-            <h2>Designing digital product with emphasis on <span>visual design</span></h2>
-            <p>A multidisciplinary designer harnessing the power of design to achieve online goals.</p>
-            <a href="#contact" class="btn">Let’s Talk <span>→</span></a>
-        </div>
-        <div class="hero-cv">
-            <a href="path-to-cv.pdf" class="download-cv-btn">Download CV</a>
-        </div>
-    </section>
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#experience">Work Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <!-- Work Experience Section -->
-    <section id="work-experience" class="work-experience">
-        <h2>Work Experience</h2>
-        <div class="experience-cards">
-            <div class="card">
-                <h3>Senior Product Designer at Ruangguru</h3>
-                <p class="experience-time">Apr 2024 - Present</p>
-                <p>Focused on creating delightful digital experiences for K12 students, improving Ruangbelajar and other educational products.</p>
-            </div>
-            <div class="card">
-                <h3>Product Designer at Ruangguru</h3>
-                <p class="experience-time">Aug 2019 - Apr 2024</p>
-                <p>Focused on creating delightful digital experiences for K12 students, improving Ruangbelajar and other educational products.</p>
-            </div>
-            <div class="card">
-                <h3>UI Designer at Badr Interactive</h3>
-                <p class="experience-time">Jan 2017 - Jul 2019</p>
-                <p>Led the design of user-centric financial platforms, increasing user engagement by 30% within the first year.</p>
-            </div>
-            <!-- Card lainnya bisa ditambahkan dengan struktur serupa -->
-        </div>
-    </section>
+  <!-- Hero Section -->
+  <section id="hero">
+    <p>Hello! I'm Romi a Product Designer</p>
+    <h1>Designing Digital Products That Empower People</h1>
+    <p>I craft thoughtful, user-centered designs that solve real-world problems and drive business growth.</p>
+    <button class="cta-button">Let’s Talk</button>
+  </section>
 
-    <!-- Portfolio Showcase Section -->
-    <section id="portfolio" class="portfolio">
-        <h2>Portfolio Showcase</h2>
-        <div id="portfolio-items" class="portfolio-items">
-            <p>Loading projects...</p>
-        </div>
-    </section>
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <h2>My Projects</h2>
+    <div id="projects" class="projects-grid"></div>
+  </section>
 
-    <!-- Article Section -->
-    <section id="articles" class="articles">
-        <h2>Articles</h2>
-        <div id="article-items" class="article-items">
-            <p>Loading articles...</p>
-        </div>
-    </section>
+  <!-- Experience Section -->
+  <section id="experience">
+    <h2>Milestones in My Design Journey</h2>
+    <ul>
+      <li><strong>Apr 2024 - Present</strong> | Senior Product Designer at Ruangguru</li>
+      <li><strong>Jul 2019 - Apr 2024</strong> | Product Designer at Ruangguru</li>
+      <li><strong>Feb 2018 - Jul 2019</strong> | User Interface Designer at Badr Interactive</li>
+    </ul>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Let's Make Something Awesome Together</h2>
+    <p>I’m always ready to explore new opportunities. Drop me a message, and let's make great things happen.</p>
+    <a href="mailto:qobalaihromi@gmail.com" class="contact-btn">qobalaihromi@gmail.com</a>
+    <a href="https://linkedin.com/in/qobalaihromi" class="contact-btn">LinkedIn</a>
+    <a href="https://dribbble.com/qobalaihromi" class="contact-btn">Dribbble</a>
+  </section>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
