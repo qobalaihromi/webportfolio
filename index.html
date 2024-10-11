@@ -3,53 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Romi Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Romi's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav>
-    <ul>
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#experience">Work Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <header>
+    <nav class="sticky-navbar">
+      <ul class="navbar">
+        <li><a href="#hero" class="navbar-tab active">Home</a></li>
+        <li><a href="#portfolio" class="navbar-tab">Portfolio</a></li>
+        <li><a href="#work-experience" class="navbar-tab">Work Experience</a></li>
+        <li><a href="#contact" class="navbar-tab">Contact</a></li>
+      </ul>
+    </nav>
+    <section id="hero" class="section-hero">
+      <div class="container-section-hero">
+        <h2 class="intro-text">Hello! I'm Romi a Product Designer</h2>
+        <h1 class="main-headline">Designing Digital Products That Empower People</h1>
+        <p class="sub-headline">
+          I craft thoughtful, user-centered designs that solve real-world problems and drive business growth.
+        </p>
+        <a href="#contact" class="cta-button">Let's Talk <span>→</span></a>
+      </div>
+    </section>
+  </header>
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <p>Hello! I'm Romi a Product Designer</p>
-    <h1>Designing Digital Products That Empower People</h1>
-    <p>I craft thoughtful, user-centered designs that solve real-world problems and drive business growth.</p>
-    <button class="cta-button">Let’s Talk</button>
-  </section>
-
-  <!-- Portfolio Section -->
-  <section id="portfolio">
-    <h2>My Projects</h2>
-    <div id="projects" class="projects-grid"></div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience">
-    <h2>Milestones in My Design Journey</h2>
-    <ul>
-      <li><strong>Apr 2024 - Present</strong> | Senior Product Designer at Ruangguru</li>
-      <li><strong>Jul 2019 - Apr 2024</strong> | Product Designer at Ruangguru</li>
-      <li><strong>Feb 2018 - Jul 2019</strong> | User Interface Designer at Badr Interactive</li>
-    </ul>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Let's Make Something Awesome Together</h2>
-    <p>I’m always ready to explore new opportunities. Drop me a message, and let's make great things happen.</p>
-    <a href="mailto:qobalaihromi@gmail.com" class="contact-btn">qobalaihromi@gmail.com</a>
-    <a href="https://linkedin.com/in/qobalaihromi" class="contact-btn">LinkedIn</a>
-    <a href="https://dribbble.com/qobalaihromi" class="contact-btn">Dribbble</a>
-  </section>
-
-  <script src="scripts.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
