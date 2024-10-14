@@ -175,21 +175,22 @@ body {
     justify-content: space-between;
     gap: 24px;
     flex-wrap: wrap;
+    align-items: stretch; /* This will make the cards stretch to equal height */
 }
 
 /* Card Portfolio */
 .portfolio-card {
     display: flex;
     flex-direction: column;
+    justify-content: space-between; /* This will spread the content */
     width: 328px;
+    height: 100%; /* Make sure the cards stretch equally */
     background: #29293C;
     padding: 24px;
     border-radius: 16px;
     gap: 24px;
     align-items: flex-start;
-    min-height: 100%; /* Ensure equal heights */
 }
-
 .thumbnail {
     height: 248px;
     width: 100%;
@@ -213,7 +214,13 @@ body {
     font-weight: 400;
     line-height: 32px;
     letter-spacing: -0.24px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limits the content to 3 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adds '...' at the end of truncated text */
 }
+
 
 .portfolio-card .cta-button {
     display: flex;
